@@ -1,0 +1,9 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Member:</strong>
+  <%= @talk_room.member %>
+</p>
+
+<%= link_to 'Edit', edit_talk_room_path(@talk_room) %> |
+<%= link_to 'Back', talk_rooms_path %>

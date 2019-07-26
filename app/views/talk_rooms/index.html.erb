@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Talk Rooms</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Member</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @talk_rooms.each do |talk_room| %>
+      <tr>
+        <td><%= talk_room.member %></td>
+        <td><%= link_to 'Show', talk_room %></td>
+        <td><%= link_to 'Edit', edit_talk_room_path(talk_room) %></td>
+        <td><%= link_to 'Destroy', talk_room, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Talk Room', new_talk_room_path %>

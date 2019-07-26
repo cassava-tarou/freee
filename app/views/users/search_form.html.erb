@@ -1,0 +1,22 @@
+<p>検索</p>
+　<%= form_tag("users/#{session[:user_id]}/add_friends") do %>
+  <input name="search" type="text">
+  <input type="submit" value="検索">
+<% end %>
+
+<% if @user %>
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Image:</strong>
+  <%= @user.image %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @user.name %>
+</p>
+
+<% end %>
+
+
